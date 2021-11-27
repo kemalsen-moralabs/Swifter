@@ -147,10 +147,10 @@ public extension Swifter {
                    success: SuccessHandler? = nil,
                    failure: FailureHandler? = nil) {
 
-        let path: String = "statuses/update.json"
+        let path: String = "tweets"
 
         var parameters = [String: Any]()
-        parameters["status"] = status
+        parameters["text"] = status
         parameters["in_reply_to_status_id"] ??= inReplyToStatusID
 		parameters["auto_populate_reply_metadata"] ??= autoPopulateReplyMetadata
 		parameters["exclude_reply_user_ids"] ??= excludeReplyUserIds
